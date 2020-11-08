@@ -36,6 +36,7 @@ set timeoutlen=100                      " By default timeoutlen is 1000 ms
 set clipboard=unnamedplus               " Copy paste between vim and everything else
 set incsearch
 set guifont=Fira\ Code\ Nerd\ Font
+set relativenumber
 
 " New stuff
 " set notimeout nottimeout
@@ -55,3 +56,11 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 " You can't stop me
 cmap w!! w !sudo tee %
+
+set langmap=ö[,ä],ß/,Ö{,Ä}
+map ü <C-]>
+map Ä [
+map Ö ]
+map ä {
+map ö }
+map ß `
