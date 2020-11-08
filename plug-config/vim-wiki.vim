@@ -1,23 +1,23 @@
 " VimWiki
-  let g:vimwiki_key_mappings =
-    \ {
-    \   'all_maps': 1,
-    \   'global': 1,
-    \   'headers': 1,
-    \   'text_objs': 1,
-    \   'table_format': 1,
-    \   'table_mappings': 1,
-    \   'lists': 1,
-    \   'links': 1,
-    \   'html': 1,
-    \   'mouse': 1,
-    \ }
+"""  let g:vimwiki_key_mappings =
+"""    \ {
+"""    \   'all_maps': 1,
+"""    \   'global': 1,
+"""    \   'headers': 1,
+"""    \   'text_objs': 1,
+"""    \   'table_format': 1,
+"""    \   'table_mappings': 1,
+"""    \   'lists': 1,
+"""    \   'links': 1,
+"""    \   'html': 1,
+"""    \   'mouse': 1,
+"""    \ }
 
 " Filetypes enabled for
-let g:vimwiki_filetypes = ['markdown']
+"""let g:vimwiki_filetypes = ['markdown']
 
-let g:vimwiki_list = [{'path': '~/.config/nvim/wiki',
-                      \ 'syntax': 'markdown', 'ext': '.md', 'exclude_files': ['**/README.md', '**/Readme.md'] }]
+"""let g:vimwiki_list = [{'path': '~/.config/nvim/wiki',
+"""                      \ 'syntax': 'markdown', 'ext': '.md', 'exclude_files': ['**/README.md', '**/Readme.md'] }]
 
 " let g:vimwiki_auto_header = 0
 " let g:vimwiki_markdown_header_style = 1
@@ -50,6 +50,40 @@ let g:vimwiki_list = [{'path': '~/.config/nvim/wiki',
 " let g:vimwiki_global_ext = 1
 " let g:vimwiki_hl_cb_checked = 0
 
+"""" VIMWIKI WITH MARKDOWN SUPPORT
+let g:vimwiki_ext2syntax = {'.md': 'markdown', '.markdown': 'markdown'}
+let g:vimwiki_global_ext=0
+
+let wiki_1 = {}
+let wiki_1.path = '~/vimwiki/vimwiki'
+let wiki_1.path_html = '~/vimwiki/vimwiki_html'
+let wiki_2 = {}
+let wiki_2.path = '~/vimwiki/private'
+let wiki_2.path_html = '~/vimwiki/private_html'
+let wiki_3 = {}
+let wiki_3.path = '~/vimwiki/docs'
+let wiki_3.path_html = '~/vimwiki/docs_html'
+let wiki_4 = {}
+let wiki_4.path = '~/vimwiki/web'
+let wiki_4.path_html = '~/vimwiki/web_html'
+
+let g:vimwiki_list = [wiki_1, wiki_2, wiki_3, wiki_4]
+"let g:vimwiki_list = [wiki_4, wiki_3, wiki_2, wiki_1]
+
+let g:vimwiki_list = [{
+  \ 'auto_export': 1,
+  \ 'automatic_nested_syntaxes':1,
+  \ 'path_html': '$HOME/vimwiki/web/public',
+  \ 'path': '$HOME/vimwiki/web/content',
+  \ 'template_path': '$HOME/vimwiki/web/themes',
+  \ 'syntax': 'markdown',
+  \ 'ext':'.md',
+  \ 'template_default':'markdown',
+  \ 'custom_wiki2html': '$HOME/scripts/wiki2hugo.sh',
+  \ 'template_ext':'.html'},
+	\{'path': '~/vimwiki/docs/', 'syntax': 'markdown', 'ext': '.md', 'custom_wiki2html': '/home/fred/scripts/wiki2html.sh'},
+	\{'path': '~/vimwiki/private/', 'syntax': 'markdown', 'ext': '.md', 'custom_wiki2html': '/home/fred/scripts/wiki2html.sh'}, 
+	\{'path': '~/vimwiki/vimwiki/', 'syntax': 'markdown', 'ext': '.md', 'custom_wiki2html': '/home/fred/scripts/wiki2html.sh'}]
 
 
 
