@@ -6,7 +6,7 @@ imap <C-k> <C-w>k
 imap <C-l> <C-w>l
 " g Leader key
 let mapleader=" "
-" let localleader=" "
+let localleader="\\"
 nnoremap <Space> <Nop>
 
 " Better indenting
@@ -28,6 +28,12 @@ else
   " I hate escape more than anything else
   inoremap jk <Esc>
   inoremap kj <Esc>
+
+  nnoremap df :w<CR>
+  nnoremap fd :w<CR>
+
+  nnoremap jk :q<CR>
+  nnoremap kj :q<CR>
 
   " Easy CAPS
   " inoremap <c-u> <ESC>viwUi
@@ -95,3 +101,7 @@ endif
 " Better nav for omnicomplete
 inoremap <expr> <c-j> ("\<C-n>")
 inoremap <expr> <c-k> ("\<C-p>")
+
+" Ranger
+let g:ranger_map_keys = 0
+map <leader>r :Ranger<CR>

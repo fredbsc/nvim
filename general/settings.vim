@@ -56,6 +56,7 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 " You can't stop me
 cmap w!! w !sudo tee %
+command! W :execute ':silent w !sudo tee % > /dev/null' | :edit!
 
 set langmap=ö[,ä],ß/,Ö{,Ä}
 map ü <C-]>

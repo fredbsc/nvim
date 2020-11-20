@@ -156,7 +156,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Plug 'vim-airline/vim-airline'
     " Plug 'vim-airline/vim-airline-themes'
     " Ranger
-    " Plug 'francoiscabrol/ranger.vim'
+    Plug 'francoiscabrol/ranger.vim'
     " Plug 'rbgrouleff/bclose.vim'
     " Making stuff
     " Plug 'neomake/neomake'
