@@ -77,8 +77,6 @@
     "v": "open:vsplit"
   },
 
-  "bookmark.sign": "",
-
   //coc-emoji
   "coc.source.emoji.filetypes": ["markdown"]
 

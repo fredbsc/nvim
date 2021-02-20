@@ -23,6 +23,8 @@ let g:coc_global_extensions = [
   \ 'coc-pyright',
   \ 'coc-explorer',
   \ 'coc-svg',
+  \ 'coc-go',
+  \ 'coc-sh',
   \ 'coc-prettier',
   \ 'coc-vimlsp',
   \ 'coc-xml',

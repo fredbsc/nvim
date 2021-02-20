@@ -175,6 +175,9 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Debugging
     " Rearanging Arguments
     Plug 'AndrewRadev/sideways.vim'
+    " vim-go
+    Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+    " Plug 'zchee/nvim-go', { 'do': 'make'}
   endif
 
 call plug#end()

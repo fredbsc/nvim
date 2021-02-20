@@ -12,9 +12,9 @@ let g:startify_session_dir = '~/.config/nvim/session'
 
 let g:startify_lists = [
           \ { 'type': 'files',     'header': ['   Files']                        },
-          \ { 'type': 'dir',       'header': ['   Current Directory '. getcwd()] },
           \ { 'type': 'sessions',  'header': ['   Sessions']                     },
           \ { 'type': 'bookmarks', 'header': ['   Bookmarks']                    },
+          \ { 'type': 'dir',       'header': ['   Current Directory '. getcwd()] },
           \ ]
 
 
@@ -33,10 +33,9 @@ function! StartifyEntryFormat()
 let g:startify_bookmarks = [
             \ { 'c': '~/.config/i3/config' },
             \ { 'i': '~/.config/nvim/init.vim' },
-            \ { 'z': '~/.zshrc' },
-            \ '~/Blog',
-            \ '~/Code',
-            \ '~/Pics',
+            \ { 'd': '~/.config/sxhkd/sxhkdrc' },
+            \ { 'a': '~/.bash_aliases' },
+            \ { 'g': '~/go/src'},
             \ ]
 
 let g:startify_enable_special = 0
