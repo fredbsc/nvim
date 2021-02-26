@@ -98,6 +98,7 @@ let g:which_key_map.b = {
       \ 'L' : [':BufferOrderByLanguage' , 'order by language'],
       \ 'n' : ['bnext'                  , 'next-buffer'],
       \ 'p' : ['bprevious'              , 'previous-buffer'],
+      \ 't' : [':b#'                    , 'toggle-buffer'],
       \ '?' : ['Buffers'                , 'fzf-buffer'],
       \ }
 
