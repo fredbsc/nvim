@@ -1,13 +1,15 @@
 hi Comment cterm=italic
 let g:nvcode_termcolors=256
 
+let ayucolor="mirage"  
+
 syntax on
 " colorscheme nord
 colorscheme nvcode
 " colorscheme onedark
 " colorscheme TSnazzy
 " colorscheme aurora
-
+" colorscheme ayu
 
 " checks if your terminal has 24-bit color support
 if (has("termguicolors"))

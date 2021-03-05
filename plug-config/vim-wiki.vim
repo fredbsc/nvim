@@ -13,11 +13,6 @@
 """    \   'mouse': 1,
 """    \ }
 
-" Filetypes enabled for
-"""let g:vimwiki_filetypes = ['markdown']
-
-"""let g:vimwiki_list = [{'path': '~/.config/nvim/wiki',
-"""                      \ 'syntax': 'markdown', 'ext': '.md', 'exclude_files': ['**/README.md', '**/Readme.md'] }]
 
 " let g:vimwiki_auto_header = 0
 " let g:vimwiki_markdown_header_style = 1
@@ -25,7 +20,6 @@
 " let g:vimwiki_tags_header = 'Generated Tags'
 " let g:vimwiki_links_header_level = 1
 " let g:vimwiki_links_header = 'Generated Links'
-" let g:vimwiki_auto_chdir = 0
 " let g:vimwiki_map_prefix = '<Leader>w'
 " let g:vimwiki_toc_link_format = 0
 " let g:vimwiki_toc_header_level = 1
@@ -38,52 +32,65 @@
 " let g:vimwiki_valid_html_tags = 'b,i,s,u,sub,sup,kbd,br,hr'
 " let g:vimwiki_html_header_numbering_sym = ''
 " let g:vimwiki_html_header_numbering = 0
-" let g:vimwiki_dir_link = ''
 " let g:vimwiki_markdown_link_ext = 0
 " let g:vimwiki_create_link = 1
 " let g:vimwiki_use_calendar = 1
 " let g:vimwiki_text_ignore_newline = 1
 " let g:vimwiki_list_ignore_newline = 1
-" let g:vimwiki_folding = ''
 " let g:vimwiki_listsym_rejected = '✗'
-" let g:vimwiki_listsyms = '✗○◐●✓'
+let g:vimwiki_listsyms = '✗○◐●✓'
+let g:vimwiki_table_mappings = 0
 " let g:vimwiki_global_ext = 1
 " let g:vimwiki_hl_cb_checked = 0
 
-"""" VIMWIKI WITH MARKDOWN SUPPORT
-let g:vimwiki_ext2syntax = {'.md': 'markdown', '.markdown': 'markdown'}
-let g:vimwiki_global_ext=0
+" Markdown in Wiki
+map <leader>wp :MarkdownPreview<CR>
+map <leader>wx :VimwikiToggleListItem<CR>
 
-let wiki_1 = {}
-let wiki_1.path = '~/vimwiki/vimwiki'
-let wiki_1.path_html = '~/vimwiki/vimwiki_html'
-let wiki_2 = {}
-let wiki_2.path = '~/vimwiki/private'
-let wiki_2.path_html = '~/vimwiki/private_html'
-let wiki_3 = {}
-let wiki_3.path = '~/vimwiki/docs'
-let wiki_3.path_html = '~/vimwiki/docs_html'
-let wiki_4 = {}
-let wiki_4.path = '~/vimwiki/web'
-let wiki_4.path_html = '~/vimwiki/web_html'
-
-let g:vimwiki_list = [wiki_1, wiki_2, wiki_3, wiki_4]
-"let g:vimwiki_list = [wiki_4, wiki_3, wiki_2, wiki_1]
+let g:vimwiki_dir_link = 'index'    " Open /index instead of directory listing.
+" let g:vimwiki_folding = 'expr'      " Enable folding.
 
 let g:vimwiki_list = [{
   \ 'auto_export': 1,
   \ 'automatic_nested_syntaxes':1,
   \ 'path_html': '$HOME/vimwiki/web/public',
-  \ 'path': '$HOME/vimwiki/web/content',
+  \ 'path': '$HOME/vimwiki/web/content/blog',
   \ 'template_path': '$HOME/vimwiki/web/themes',
   \ 'syntax': 'markdown',
   \ 'ext':'.md',
   \ 'template_default':'markdown',
   \ 'custom_wiki2html': '$HOME/scripts/wiki2hugo.sh',
   \ 'template_ext':'.html'},
-	\{'path': '~/vimwiki/docs/', 'syntax': 'markdown', 'ext': '.md', 'custom_wiki2html': '/home/fred/scripts/wiki2html.sh'},
-	\{'path': '~/vimwiki/private/', 'syntax': 'markdown', 'ext': '.md', 'custom_wiki2html': '/home/fred/scripts/wiki2html.sh'}, 
-	\{'path': '~/vimwiki/vimwiki/', 'syntax': 'markdown', 'ext': '.md', 'custom_wiki2html': '/home/fred/scripts/wiki2html.sh'}]
+	\{'path': '~/vimwiki/docs/',
+  \ 'path_html': '~/vimwiki/docs_html',
+  \ 'template_path': '~/vimwiki/template',
+  \ 'template_default': 'default',
+  \ 'template_ext': '.html',
+  \ 'syntax': 'markdown', 
+  \ 'ext': '.md', 
+  \ 'html_filename_parameterization': 1, 
+  \ 'auto_export': 1,
+  \ 'custom_wiki2html': 'vimwiki_markdown'},
+	\{'path': '~/vimwiki/private/',
+  \ 'path_html': '~/vimwiki/private_html',
+  \ 'template_path':'~/vimwiki/template',
+  \ 'template_default': 'default',
+  \ 'template_ext': '.html',
+  \ 'syntax': 'markdown',
+  \ 'ext': '.md', 
+  \ 'html_filename_parameterization': 1, 
+  \ 'auto_export': 1,
+  \ 'custom_wiki2html': 'vimwiki_markdown'},
+	\{'path': '~/vimwiki/vimwiki/',
+  \ 'path_html': '~/vimwiki/vimwiki_html',
+  \ 'template_path':'~/vimwiki/template',
+  \ 'template_default': 'default',
+  \ 'template_ext': '.html',
+  \ 'syntax': 'markdown', 
+  \ 'ext': '.md', 
+  \ 'html_filename_parameterization': 1, 
+  \ 'auto_export': 1,
+  \ 'custom_wiki2html': 'vimwiki_markdown'}]
 
 
 

@@ -53,7 +53,7 @@ set relativenumber
 
 " au! BufWritePost $MYVIMRC source %      " auto source when writing to init.vm alternatively you can run :source $MYVIMRC
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
-
+autocmd FileType php setlocal autoindent
 " You can't stop me
 cmap w!! w !sudo tee %
 command! W :execute ':silent w !sudo tee % > /dev/null' | :edit!

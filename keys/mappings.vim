@@ -35,6 +35,9 @@ else
   nnoremap jk :q<CR>
   nnoremap kj :q<CR>
 
+  nnoremap j gj
+  nnoremap k gk
+
   " Easy CAPS
   " inoremap <c-u> <ESC>viwUi
   " nnoremap <c-u> viwU<Esc>
@@ -107,5 +110,3 @@ let g:ranger_map_keys = 0
 map <leader>r :Ranger<CR>
 map <leader>xw :let $VIM_DIR=expand('%:p:h')<CR>:!alacritty -e tmux new -c $VIM_DIR<CR>
 
-" Markdown in Wiki
-map <leader>wp :MarkdownPreview<CR>

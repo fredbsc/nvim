@@ -33,9 +33,12 @@ function! StartifyEntryFormat()
 let g:startify_bookmarks = [
             \ { 'c': '~/.config/i3/config' },
             \ { 'i': '~/.config/nvim/init.vim' },
-            \ { 'd': '~/.config/sxhkd/sxhkdrc' },
+            \ { 's': '~/.config/sxhkd/sxhkdrc' },
             \ { 'a': '~/.bash_aliases' },
-            \ { 'g': '~/go/src'},
+            \ { 't': '~/.config/alacritty/alacritty.yml' },
+            \ { 'd': '~/vimwiki/docs/index.md' },
+            \ { 'p': '~/vimwiki/private/index.md' },
+            \ { 'b': '~/vimwiki/vimwiki/index.md' },
             \ ]
 
 let g:startify_enable_special = 0

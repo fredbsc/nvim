@@ -56,6 +56,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'alvan/vim-closetag'
     " Themes
     Plug 'christianchiarulli/nvcode-color-schemes.vim'
+    Plug 'ayu-theme/ayu-vim'
     " Intellisense
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     " Status Line
